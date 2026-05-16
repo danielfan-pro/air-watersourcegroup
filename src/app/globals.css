@@ -128,9 +128,59 @@ iframe {
   color: var(--color-brand-dark);
 }
 
+.nav-shop-button {
+  min-height: 3rem;
+  padding-inline: 1rem;
+  white-space: nowrap;
+}
+
+.mobile-menu-button {
+  display: inline-flex;
+  height: 3rem;
+  width: 3rem;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 0.32rem;
+  border-radius: 9999px;
+  border: 1px solid rgba(16, 32, 51, 0.12);
+  background: rgba(255, 255, 255, 0.9);
+  color: var(--foreground);
+}
+
+.mobile-menu-line {
+  display: block;
+  height: 2px;
+  width: 1.15rem;
+  border-radius: 9999px;
+  background: currentColor;
+  transition:
+    opacity 160ms ease,
+    transform 160ms ease;
+}
+
+.line-open-top {
+  transform: translateY(0.43rem) rotate(45deg);
+}
+
+.line-open-middle {
+  opacity: 0;
+}
+
+.line-open-bottom {
+  transform: translateY(-0.43rem) rotate(-45deg);
+}
+
 .section-shell {
-  background: var(--background);
   padding-block: 6rem;
+}
+
+.section-bg-white {
+  background: #ffffff;
+}
+
+.section-bg-gray {
+  background: #f7f7f7;
 }
 
 .section-stack {

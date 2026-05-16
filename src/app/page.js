@@ -1,5 +1,6 @@
 import Link from "next/link";
 import Image from "next/image";
+import SiteHeader from "@/components/SiteHeader";
 import { siteConfig } from "@/config/siteConfig";
 
 export default function Home() {
@@ -7,44 +8,7 @@ export default function Home() {
 
   return (
     <>
-      <header className="sticky top-0 z-50 border-b border-white/65 bg-[rgba(247,250,255,0.82)] backdrop-blur">
-        <nav
-          aria-label="Primary"
-          className="mx-auto flex w-full max-w-7xl items-center justify-between px-6 py-4 lg:px-10"
-        >
-          <Link href="/" className="flex items-center gap-3" aria-label={siteConfig.name}>
-            <div className="relative h-10 w-28 sm:h-12 sm:w-36">
-              <Image
-                src="/logo-transparent.png"
-                alt="Air & Water Source Group logo"
-                fill
-                className="object-contain object-left"
-                priority
-                sizes="144px"
-              />
-            </div>
-          </Link>
-          <div className="hidden items-center gap-8 lg:flex">
-            {siteConfig.navLinks.map((link) => (
-              <Link
-                key={link.href}
-                href={link.href}
-                className="text-sm font-semibold text-slate-700 transition hover:text-[var(--color-brand)]"
-              >
-                {link.label}
-              </Link>
-            ))}
-          </div>
-          <a
-            href={siteConfig.shopifyUrl}
-            target="_blank"
-            rel="noreferrer"
-            className="button-primary"
-          >
-            Shop Online
-          </a>
-        </nav>
-      </header>
+      <SiteHeader />
 
       <main className="flex-1">
         <section className="hero-shell">
@@ -76,21 +40,27 @@ export default function Home() {
               <dl className="grid gap-4 border-t border-slate-200 pt-8 sm:grid-cols-3">
                 <div>
                   <dt className="text-sm font-semibold uppercase tracking-[0.24em] text-slate-500">
-                    Focus
+                    Same-Day Shipping
                   </dt>
-                  <dd className="mt-2 text-base text-slate-800">Geothermal and hydronic systems</dd>
+                  <dd className="mt-2 text-base text-slate-800">
+                    In-stock orders placed by 11AM ET ship same day
+                  </dd>
                 </div>
                 <div>
                   <dt className="text-sm font-semibold uppercase tracking-[0.24em] text-slate-500">
-                    Audience
+                    Multi-Location Fulfillment
                   </dt>
-                  <dd className="mt-2 text-base text-slate-800">Northeast HVAC contractors</dd>
+                  <dd className="mt-2 text-base text-slate-800">
+                    Ships from multiple warehouses for fastest delivery
+                  </dd>
                 </div>
                 <div>
                   <dt className="text-sm font-semibold uppercase tracking-[0.24em] text-slate-500">
-                    Ordering
+                    Heat Load Support
                   </dt>
-                  <dd className="mt-2 text-base text-slate-800">Online access with real support</dd>
+                  <dd className="mt-2 text-base text-slate-800">
+                    Need a calc or design help? We&apos;ve got you
+                  </dd>
                 </div>
               </dl>
             </div>
@@ -122,7 +92,7 @@ export default function Home() {
           </div>
         </section>
 
-        <section id="who-we-are" className="section-shell border-t border-slate-200/80">
+        <section id="who-we-are" className="section-shell section-bg-white border-t border-slate-200/80">
           <div className="section-stack">
             <div className="section-intro">
               <p className="eyebrow">Who We Are</p>
@@ -138,7 +108,7 @@ export default function Home() {
           </div>
         </section>
 
-        <section id="what-we-do" className="section-shell border-y border-slate-200/80">
+        <section id="what-we-do" className="section-shell section-bg-gray border-y border-slate-200/80">
           <div className="section-stack">
             <div className="section-intro">
               <p className="eyebrow">What We Do</p>
@@ -177,7 +147,7 @@ export default function Home() {
           </div>
         </section>
 
-        <section id="who-we-serve" className="section-shell">
+        <section id="who-we-serve" className="section-shell section-bg-white">
           <div className="section-stack">
             <div className="section-intro">
               <p className="eyebrow">Who We Serve</p>
@@ -196,10 +166,20 @@ export default function Home() {
                 supplier that understands both urgency and quality.
               </p>
               <ul className="grid gap-3 text-slate-700 sm:grid-cols-2">
-                <li className="list-panel">Residential and light commercial installers</li>
-                <li className="list-panel">Contractors growing their geothermal offering</li>
-                <li className="list-panel">Teams seeking dependable wholesale access</li>
-                <li className="list-panel">Professionals who value responsive support</li>
+                <li className="list-panel">
+                  Contractors installing water-to-air and water-to-water heat pump systems
+                </li>
+                <li className="list-panel">
+                  Residential and light commercial geothermal installers working with HDPE loop
+                  fields
+                </li>
+                <li className="list-panel">
+                  Teams sourcing flow centers, air handlers, buffer tanks, and heat transfer
+                  fluids
+                </li>
+                <li className="list-panel">
+                  Professionals expanding into hydronic and hybrid geothermal systems
+                </li>
               </ul>
               <div className="flex justify-center">
                 <a
@@ -215,7 +195,7 @@ export default function Home() {
           </div>
         </section>
 
-        <section id="connect" className="section-shell section-shell-compact border-t border-slate-200/80">
+        <section id="connect" className="section-shell section-shell-compact section-bg-gray border-t border-slate-200/80">
           <div className="section-stack gap-8">
             <div className="section-intro">
               <p className="eyebrow">Connect</p>
@@ -264,6 +244,15 @@ export default function Home() {
                 ))}
               </address>
             </div>
+            <div className="footer-map-frame">
+              <iframe
+                src={siteConfig.googleMapsEmbedUrl}
+                title="Map of Air & Water Source Group in Cato, New York"
+                loading="lazy"
+                referrerPolicy="no-referrer-when-downgrade"
+                className="h-full w-full"
+              />
+            </div>
             <div className="footer-detail">
               <p className="eyebrow">Hours of Operation</p>
               <div className="mt-5 space-y-3 text-base leading-7 text-[var(--color-ink-soft)]">
@@ -275,15 +264,6 @@ export default function Home() {
                   {siteConfig.businessHours.timezone}
                 </p>
               </div>
-            </div>
-            <div className="footer-map-frame">
-              <iframe
-                src={siteConfig.googleMapsEmbedUrl}
-                title="Map of Air & Water Source Group in Cato, New York"
-                loading="lazy"
-                referrerPolicy="no-referrer-when-downgrade"
-                className="h-full w-full"
-              />
             </div>
             <div className="footer-detail">
               <p className="eyebrow">Contact Us</p>
@@ -303,9 +283,8 @@ export default function Home() {
               </div>
             </div>
           </div>
-          <div className="flex flex-col gap-4 border-t border-slate-200 pt-6 text-sm text-slate-600 sm:flex-row sm:items-center sm:justify-between">
-            <p>{`© ${currentYear}, Air & Water Source Group`}</p>
-            <div className="flex items-center gap-4">
+          <div className="flex flex-col items-center gap-4 border-t border-slate-200 pt-6 text-center text-sm text-slate-600 md:flex-row md:justify-between md:text-left">
+            <div className="flex flex-col items-center gap-3">
               <p className="eyebrow">Members of NY-GEO</p>
               <div className="relative h-14 w-24">
                 <Image
@@ -317,6 +296,7 @@ export default function Home() {
                 />
               </div>
             </div>
+            <p className="md:text-right">{`© ${currentYear}, Air & Water Source Group`}</p>
           </div>
         </div>
       </footer>

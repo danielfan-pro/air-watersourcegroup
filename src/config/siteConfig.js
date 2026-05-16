@@ -5,7 +5,7 @@ export const siteConfig = {
     "A B2B geothermal wholesale distributor serving HVAC contractors across the Northeast with equipment access, technical support, and a streamlined online ordering experience.",
   url: "https://air-watersourcegroup.com",
   shopifyUrl: "https://air-watersourcegroup.store",
-  ogImage: "/logo.jpg",
+  ogImage: "/opengraph-image.jpg",
   phone: "(315) 626-4161",
   email: "salesteam@air-watersourcegroup.com",
   region: "Northeast United States",
