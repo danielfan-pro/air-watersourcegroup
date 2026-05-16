@@ -3,7 +3,7 @@ export const siteConfig = {
   shortName: "Air & Water Source Group",
   description:
     "A B2B geothermal wholesale distributor serving HVAC contractors across the Northeast with equipment access, technical support, and a streamlined online ordering experience.",
-  url: "https://air-watersourcegroup.com",
+  url: "https://air-watersourcegroup.vercel.app",
   shopifyUrl: "https://air-watersourcegroup.store",
   ogImage: "/og-image.jpg",
   phone: "(315) 626-4161",
