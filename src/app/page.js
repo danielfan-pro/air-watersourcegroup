@@ -294,20 +294,29 @@ export default function Home() {
 
       <footer>
         <div className="mx-auto flex w-full max-w-7xl flex-col gap-10 px-6 py-10 lg:px-10">
-          <div className="flex flex-col items-center gap-4 border-t border-slate-200 pt-6 text-center text-sm text-slate-600 md:flex-row md:justify-between md:text-left">
-            <div className="flex flex-col items-center gap-3">
-              <p className="eyebrow">Members of NY-GEO</p>
-              <div className="relative h-14 w-24">
-                <Image
-                  src="/ny-geo-logo-transparent.png"
-                  alt="NY-GEO member logo"
-                  fill
-                  className="object-contain object-right"
-                  sizes="96px"
-                />
+          <div className="border-t border-slate-200 pt-6 text-center text-sm text-slate-600">
+            <div className="footer-bottom-row">
+              <div className="footer-nygeo">
+                <div className="relative footer-nygeo-logo">
+                  <Image
+                    src="/ny-geo-logo-transparent.png"
+                    alt="NY-GEO member logo"
+                    fill
+                    className="object-contain"
+                    sizes="80px"
+                  />
+                </div>
+                <p>Members of NY-GEO</p>
               </div>
+              <nav className="footer-nav" aria-label="Footer navigation">
+                {siteConfig.navLinks.map((link) => (
+                  <a key={link.href} href={link.href}>
+                    {link.label}
+                  </a>
+                ))}
+              </nav>
+              <p className="footer-copyright">{`© ${currentYear}, Air & Water Source Group`}</p>
             </div>
-            <p className="md:text-right">{`© ${currentYear}, Air & Water Source Group`}</p>
           </div>
         </div>
       </footer>

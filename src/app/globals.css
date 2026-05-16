@@ -351,6 +351,58 @@ iframe {
   border-radius: inherit;
 }
 
+.footer-bottom-row {
+  display: grid;
+  gap: 1.5rem;
+  justify-items: center;
+}
+
+.footer-nygeo {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  gap: 0.5rem;
+  color: var(--color-ink-soft);
+  font-size: 0.875rem;
+  font-weight: 600;
+}
+
+.footer-nygeo-logo {
+  height: 2.5rem;
+  width: 4rem;
+}
+
+.footer-nav {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  row-gap: 4px;
+  column-gap: 1.25rem;
+  margin: 0 auto;
+  color: var(--color-ink-soft);
+}
+
+.footer-nav a {
+  display: flex;
+  min-height: 3.25rem;
+  align-items: center;
+  justify-content: center;
+  padding: 0.6rem 1rem;
+  font-weight: 600;
+  transition:
+    color 180ms ease,
+    background-color 180ms ease;
+}
+
+.footer-nav a:hover {
+  color: var(--color-brand);
+  background: rgba(20, 84, 196, 0.04);
+}
+
+.footer-copyright {
+  color: var(--color-ink-soft);
+}
+
 @media (min-width: 768px) {
   .contact-section-grid {
     grid-template-columns: minmax(0, 1fr) minmax(0, 1fr);
@@ -360,6 +412,59 @@ iframe {
   .footer-contact-panel {
     grid-template-columns: repeat(2, minmax(0, 1fr));
     grid-auto-rows: minmax(15rem, auto);
+  }
+
+  .footer-bottom-row {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 2rem;
+    text-align: left;
+  }
+
+  .footer-nygeo {
+    flex: 1;
+    justify-content: flex-start;
+    flex-direction: row;
+    gap: 0.55rem;
+    font-size: 0.875rem;
+  }
+
+  .footer-nygeo-logo {
+    height: 1.625rem;
+    width: 2.75rem;
+  }
+
+  .footer-nav {
+    flex: 1.5;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 0;
+    margin: 0;
+  }
+
+  .footer-nav a {
+    min-height: auto;
+    padding: 0;
+  }
+
+  .footer-nav a + a::before {
+    content: "·";
+    margin-inline: 1rem;
+    color: rgba(100, 116, 139, 0.55);
+  }
+
+  .footer-nav a:hover {
+    background: transparent;
+    text-decoration: underline;
+    text-underline-offset: 0.25rem;
+  }
+
+  .footer-copyright {
+    flex: 1;
+    flex-shrink: 0;
+    text-align: right;
   }
 }
 
