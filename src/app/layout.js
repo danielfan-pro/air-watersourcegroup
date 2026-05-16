@@ -4,7 +4,7 @@ import { siteConfig } from "@/config/siteConfig";
 export const metadata = {
   metadataBase: new URL(siteConfig.url),
   title: {
-    default: `${siteConfig.shortName} | Geothermal Distribution for Northeast HVAC Contractors`,
+    default: siteConfig.shortName,
     template: `%s | ${siteConfig.shortName}`,
   },
   description: siteConfig.description,
@@ -29,7 +29,7 @@ export const metadata = {
     locale: "en_US",
     url: siteConfig.url,
     siteName: siteConfig.shortName,
-    title: `${siteConfig.shortName} | Geothermal Distribution for Northeast HVAC Contractors`,
+    title: siteConfig.shortName,
     description: siteConfig.description,
     images: [
       {
@@ -42,7 +42,7 @@ export const metadata = {
   },
   twitter: {
     card: "summary_large_image",
-    title: `${siteConfig.shortName} | Geothermal Distribution for Northeast HVAC Contractors`,
+    title: siteConfig.shortName,
     description: siteConfig.description,
     images: [siteConfig.ogImage],
   },

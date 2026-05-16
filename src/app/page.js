@@ -65,34 +65,29 @@ export default function Home() {
               </dl>
             </div>
 
-            <aside className="panel-card overflow-hidden">
-              <div className="space-y-5">
-                <p className="eyebrow">Built for Better Contractor Workflows</p>
-                <h2 className="text-3xl font-semibold tracking-tight text-slate-950">
-                  A cleaner path from product sourcing to project delivery.
-                </h2>
-                <p className="text-base leading-7 text-[var(--color-ink-soft)]">
-                  With curated inventory, responsive guidance, and a streamlined online store,
-                  we make it easier to find the right equipment and keep projects moving.
-                </p>
-              </div>
-              <div className="mt-8 grid gap-4">
-                {[
-                  "Wholesale access to geothermal equipment and accessories",
-                  "Responsive support for product selection and ordering",
-                  "A premium online buying experience anchored to Shopify",
-                ].map((item) => (
-                  <div key={item} className="flex items-start gap-3 rounded-2xl bg-white/70 p-4">
-                    <span className="mt-1 h-2.5 w-2.5 rounded-full bg-[var(--color-brand)]" />
-                    <p className="text-sm leading-6 text-slate-700">{item}</p>
-                  </div>
-                ))}
-              </div>
+            <aside className="photo-placeholder">
+              <svg
+                aria-hidden="true"
+                viewBox="0 0 24 24"
+                className="h-10 w-10 text-[var(--color-brand)]"
+                fill="none"
+                stroke="currentColor"
+                strokeLinecap="round"
+                strokeLinejoin="round"
+                strokeWidth="1.8"
+              >
+                <path d="M14.5 4.5 16 7h3.5A2.5 2.5 0 0 1 22 9.5v8A2.5 2.5 0 0 1 19.5 20h-15A2.5 2.5 0 0 1 2 17.5v-8A2.5 2.5 0 0 1 4.5 7H8l1.5-2.5h5Z" />
+                <circle cx="12" cy="13.5" r="3.5" />
+              </svg>
+              <p className="mt-3 text-center text-sm font-semibold text-[var(--color-brand)]">
+                Photo Coming Soon
+              </p>
             </aside>
           </div>
         </section>
 
-        <section id="who-we-are" className="section-shell section-bg-white border-t border-slate-200/80">
+        <div className="section-divider" aria-hidden="true" />
+        <section id="who-we-are" className="section-shell section-bg-white">
           <div className="section-stack">
             <div className="section-intro">
               <p className="eyebrow">Who We Are</p>
@@ -100,15 +95,41 @@ export default function Home() {
                 A relationship-first wholesale partner for geothermal professionals.
               </h2>
               <p className="section-copy">
-                Air & Water Source Group, LLC. is a B2B distributor focused on helping
-                contractors access sustainable HVAC solutions with more confidence and less
-                friction.
+                Air & Water Source Group, LLC. is a B2B wholesale distributor specializing in
+                geothermal and hydronic HVAC systems — helping contractors source the right
+                equipment, get expert guidance, and move projects forward without the runaround.
               </p>
+            </div>
+            <div className="grid gap-5 md:grid-cols-3">
+              {["Our Team", "Our Warehouse", "In the Field"].map((label) => (
+                <div key={label} className="photo-card-placeholder">
+                  <svg
+                    aria-hidden="true"
+                    viewBox="0 0 24 24"
+                    className="h-9 w-9 text-[var(--color-brand)]"
+                    fill="none"
+                    stroke="currentColor"
+                    strokeLinecap="round"
+                    strokeLinejoin="round"
+                    strokeWidth="1.8"
+                  >
+                    <path d="M14.5 4.5 16 7h3.5A2.5 2.5 0 0 1 22 9.5v8A2.5 2.5 0 0 1 19.5 20h-15A2.5 2.5 0 0 1 2 17.5v-8A2.5 2.5 0 0 1 4.5 7H8l1.5-2.5h5Z" />
+                    <circle cx="12" cy="13.5" r="3.5" />
+                  </svg>
+                  <p className="mt-3 text-center text-sm font-semibold text-[var(--color-brand)]">
+                    {label}
+                  </p>
+                  <p className="mt-1 text-center text-xs font-medium text-slate-500">
+                    Photo coming soon
+                  </p>
+                </div>
+              ))}
             </div>
           </div>
         </section>
 
-        <section id="what-we-do" className="section-shell section-bg-gray border-y border-slate-200/80">
+        <div className="section-divider" aria-hidden="true" />
+        <section id="what-we-do" className="section-shell section-bg-gray">
           <div className="section-stack">
             <div className="section-intro">
               <p className="eyebrow">What We Do</p>
@@ -116,8 +137,8 @@ export default function Home() {
                 We connect contractors to the geothermal products and support they need.
               </h2>
               <p className="section-copy">
-                Our role is to make sourcing geothermal equipment feel organized, efficient,
-                and backed by people who understand contractor timelines.
+                Our role is to make sourcing geothermal equipment straightforward, efficient, and
+                backed by people who understand contractor timelines.
               </p>
             </div>
             <div className="grid gap-5 md:grid-cols-3 section-content-full">
@@ -147,39 +168,33 @@ export default function Home() {
           </div>
         </section>
 
+        <div className="section-divider" aria-hidden="true" />
         <section id="who-we-serve" className="section-shell section-bg-white">
           <div className="section-stack">
             <div className="section-intro">
               <p className="eyebrow">Who We Serve</p>
               <h2 className="section-title">
-                Built for Northeast HVAC contractors working in sustainable energy.
+                We supply the products geothermal contractors rely on.
               </h2>
               <p className="section-copy">
                 We support professionals who need dependable product access, quick answers,
                 and a supplier relationship that helps projects keep moving.
               </p>
             </div>
-            <div className="content-card space-y-6 section-content-single">
-              <p>
-                We are focused on the needs of HVAC contractors across the Northeast who are
-                expanding into geothermal, improving project efficiency, and looking for a
-                supplier that understands both urgency and quality.
-              </p>
-              <ul className="grid gap-3 text-slate-700 sm:grid-cols-2">
-                <li className="list-panel">
-                  Contractors installing water-to-air and water-to-water heat pump systems
-                </li>
-                <li className="list-panel">
-                  Residential and light commercial geothermal installers working with HDPE loop
-                  fields
-                </li>
-                <li className="list-panel">
-                  Teams sourcing flow centers, air handlers, buffer tanks, and heat transfer
-                  fluids
-                </li>
-                <li className="list-panel">
-                  Professionals expanding into hydronic and hybrid geothermal systems
-                </li>
+            <div className="space-y-6 section-content-single">
+              <ul className="grid gap-3 text-slate-700 sm:grid-cols-2 lg:grid-cols-3">
+                {[
+                  "Heat Pumps",
+                  "Flow Centers",
+                  "Hydronics",
+                  "Heat Transfer Fluids",
+                  "HDPE Items",
+                  "Fusion Equipment",
+                ].map((category) => (
+                  <li key={category} className="list-panel category-card">
+                    {category}
+                  </li>
+                ))}
               </ul>
               <div className="flex justify-center">
                 <a
@@ -195,18 +210,17 @@ export default function Home() {
           </div>
         </section>
 
-        <section id="connect" className="section-shell section-shell-compact section-bg-gray border-t border-slate-200/80">
+        <div className="section-divider" aria-hidden="true" />
+        <section id="connect" className="section-shell section-shell-compact section-bg-gray">
           <div className="section-stack gap-8">
             <div className="section-intro">
-              <p className="eyebrow">Connect</p>
-              <h2 className="section-title">Tell us what you need and we’ll help you get moving.</h2>
+              <p className="eyebrow">CONTACT</p>
+              <h2 className="section-title">Tell us what you need and we&apos;ll help you get moving.</h2>
               <p className="text-lg leading-8 text-[var(--color-ink-soft)]">
-                Use the inquiry form below for sourcing, project, or account questions. Key
-                company details and location information now live in the footer for a cleaner
-                browsing experience.
+                Use the inquiry form for sourcing, project, or account questions.
               </p>
             </div>
-            <div className="section-content-full">
+            <div className="contact-section-grid">
               <div className="tally-shell">
                 <div className="mb-5">
                   <p className="eyebrow">Inquiry Form</p>
@@ -220,69 +234,66 @@ export default function Home() {
                   title="Air & Water"
                   loading="lazy"
                   width="100%"
-                  height="350"
+                  height="620"
                   frameBorder="0"
                   marginHeight="0"
                   marginWidth="0"
                   className="w-full"
                 />
               </div>
+              <div className="contact-details-card">
+                <div className="contact-map-frame">
+                  <iframe
+                    src={siteConfig.googleMapsEmbedUrl}
+                    title="Map of Air & Water Source Group in Cato, New York"
+                    loading="lazy"
+                    referrerPolicy="no-referrer-when-downgrade"
+                    className="h-full w-full"
+                  />
+                </div>
+                <div className="contact-detail-group">
+                  <p className="eyebrow">COMPANY LOCATION</p>
+                  <address className="mt-4 not-italic space-y-2 text-base leading-7 text-[var(--color-ink-soft)]">
+                    <p className="font-semibold text-slate-900">{siteConfig.name}</p>
+                    {siteConfig.addressLines.map((line) => (
+                      <p key={line}>{line}</p>
+                    ))}
+                  </address>
+                </div>
+                <div className="contact-detail-group">
+                  <p className="eyebrow">HOURS OF OPERATION</p>
+                  <div className="mt-4 space-y-2 text-base leading-7 text-[var(--color-ink-soft)]">
+                    <p className="font-semibold text-slate-800">{siteConfig.businessHours.days}</p>
+                    <p className="font-semibold text-slate-950">
+                      {siteConfig.businessHours.time} {siteConfig.businessHours.timezone}
+                    </p>
+                  </div>
+                </div>
+                <div className="contact-detail-group">
+                  <p className="eyebrow">CONTACT US</p>
+                  <div className="mt-4 space-y-3 text-base leading-7">
+                    <a
+                      href={`mailto:${siteConfig.email}`}
+                      className="block font-semibold text-[var(--color-brand)] transition hover:text-[var(--color-brand-dark)]"
+                    >
+                      {siteConfig.email}
+                    </a>
+                    <a
+                      href={`tel:${siteConfig.phone.replace(/[^0-9]/g, "")}`}
+                      className="block font-semibold text-slate-800 transition hover:text-[var(--color-brand-dark)]"
+                    >
+                      {siteConfig.phone}
+                    </a>
+                  </div>
+                </div>
+              </div>
             </div>
           </div>
         </section>
       </main>
 
-      <footer className="border-t border-slate-200">
+      <footer>
         <div className="mx-auto flex w-full max-w-7xl flex-col gap-10 px-6 py-10 lg:px-10">
-          <div className="footer-contact-panel">
-            <div className="footer-detail">
-              <p className="eyebrow">Company Location</p>
-              <address className="mt-5 not-italic space-y-3 text-base leading-7 text-[var(--color-ink-soft)]">
-                <p className="font-semibold text-slate-900">{siteConfig.name}</p>
-                {siteConfig.addressLines.map((line) => (
-                  <p key={line}>{line}</p>
-                ))}
-              </address>
-            </div>
-            <div className="footer-map-frame">
-              <iframe
-                src={siteConfig.googleMapsEmbedUrl}
-                title="Map of Air & Water Source Group in Cato, New York"
-                loading="lazy"
-                referrerPolicy="no-referrer-when-downgrade"
-                className="h-full w-full"
-              />
-            </div>
-            <div className="footer-detail">
-              <p className="eyebrow">Hours of Operation</p>
-              <div className="mt-5 space-y-3 text-base leading-7 text-[var(--color-ink-soft)]">
-                <p className="font-semibold text-slate-800">{siteConfig.businessHours.days}</p>
-                <p className="text-2xl font-semibold text-slate-950">
-                  {siteConfig.businessHours.time}
-                </p>
-                <p className="font-semibold text-slate-800">
-                  {siteConfig.businessHours.timezone}
-                </p>
-              </div>
-            </div>
-            <div className="footer-detail">
-              <p className="eyebrow">Contact Us</p>
-              <div className="mt-5 space-y-4 text-base leading-7">
-                <a
-                  href={`mailto:${siteConfig.email}`}
-                  className="block font-semibold text-[var(--color-brand)] transition hover:text-[var(--color-brand-dark)]"
-                >
-                  {siteConfig.email}
-                </a>
-                <a
-                  href={`tel:${siteConfig.phone.replace(/[^0-9]/g, "")}`}
-                  className="block font-semibold text-slate-800 transition hover:text-[var(--color-brand-dark)]"
-                >
-                  {siteConfig.phone}
-                </a>
-              </div>
-            </div>
-          </div>
           <div className="flex flex-col items-center gap-4 border-t border-slate-200 pt-6 text-center text-sm text-slate-600 md:flex-row md:justify-between md:text-left">
             <div className="flex flex-col items-center gap-3">
               <p className="eyebrow">Members of NY-GEO</p>
