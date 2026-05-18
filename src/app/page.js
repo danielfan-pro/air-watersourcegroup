@@ -38,24 +38,24 @@ export default function Home() {
                 </Link>
               </div>
               <dl className="grid gap-4 border-t border-slate-200 pt-8 sm:grid-cols-3">
-                <div>
-                  <dt className="text-sm font-semibold uppercase tracking-[0.24em] text-slate-500">
+                <div className="hero-stat-item">
+                  <dt className="hero-stat-title text-sm font-semibold uppercase tracking-[0.24em] text-slate-500">
                     Same-Day Shipping
                   </dt>
                   <dd className="mt-2 text-base text-slate-800">
                     In-stock orders placed by 11AM ET ship same day
                   </dd>
                 </div>
-                <div>
-                  <dt className="text-sm font-semibold uppercase tracking-[0.24em] text-slate-500">
+                <div className="hero-stat-item">
+                  <dt className="hero-stat-title text-sm font-semibold uppercase tracking-[0.24em] text-slate-500">
                     Multi-Location Fulfillment
                   </dt>
                   <dd className="mt-2 text-base text-slate-800">
                     Ships from multiple warehouses for fastest delivery
                   </dd>
                 </div>
-                <div>
-                  <dt className="text-sm font-semibold uppercase tracking-[0.24em] text-slate-500">
+                <div className="hero-stat-item">
+                  <dt className="hero-stat-title text-sm font-semibold uppercase tracking-[0.24em] text-slate-500">
                     Heat Load Support
                   </dt>
                   <dd className="mt-2 text-base text-slate-800">

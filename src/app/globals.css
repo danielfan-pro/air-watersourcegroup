@@ -47,6 +47,16 @@ iframe {
   background: var(--background);
 }
 
+.hero-stat-item {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+}
+
+.hero-stat-title {
+  min-height: 2.6rem;
+}
+
 .eyebrow {
   font-size: 0.78rem;
   font-weight: 700;
